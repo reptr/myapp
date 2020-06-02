@@ -3,6 +3,6 @@
 
 @section('content')
    <div class="container">
-      HOME
+      my name {{ $name }}
    </div>   
 @endsection

@@ -45,9 +45,11 @@ use Illuminate\Http\Request;
 //     return view('welcome', ['name' => $name, 'body' => $postBody]);
 // });
 
-Route::get('/', function(){
-    return view('home');
-});
+// Route::get('/', function(){
+//     // $name = request('name');
+//     // return "my name is ". htmlspecialchars($name);
+//     return view('home');
+// });
 
 // Route::view('contact','contact');
 
@@ -62,6 +64,9 @@ Route::get('/', function(){
 //     return request()->is('contact') ? 'sama' : 'tidak';
 // });
 
-Route::view('contact','contact');
-Route::view('about','about');
-Route::view('login','login');
+// Route::get('/', 'HomeController@index'); //get
+Route::get('/', 'HomeController'); //karna method invokable, tdak usah kasih method (@<nama method>)
+
+Route::view('contact', 'contact'); //view -> liat
+Route::view('about', 'about');
+Route::view('login', 'login');
